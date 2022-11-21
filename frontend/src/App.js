@@ -32,7 +32,7 @@ function App() {
 
       <div className='container-fluid'>
         <Route path="/" component={Home} exact />
-      <Route path="/register" component={Register} />
+      <Route path="register" component={Register} />
       <Route path="/me" component={Profile} />
       <Route path="/me/update" component={UpdateUserProfile} />
       <ProtectedRoute path="/allusers" component={AllUser} />
