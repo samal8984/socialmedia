@@ -15,7 +15,16 @@ const ProtectedRoute = ({  component: Component, ...rest }) => {
                     {...rest}
                     render={props => {
                         if (isAuthenticated === false) {
-                            return <Redirect to='/login' />
+                            return <Redirect to='/register' />
+                            alert.show(
+                                {
+                                  actionText: "Login",
+                                  content:
+                                    "Please Login or Register",
+                                  title: "Please Register to access users",
+                                },
+                            )
+                        
                         
                         }
 
