@@ -10,8 +10,8 @@
   "scripts": {
     "start": "node backend/server.js",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server",
-    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
-    "build": "react-scripts build"
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server"
+    
     
   },
   "author": "anil samal",
