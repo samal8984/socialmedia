@@ -1,6 +1,0 @@
-[[redirects]]
-from = "/home/register"
-to = "/register"
-from="/home/me"
-to="/me"
-status= 200
