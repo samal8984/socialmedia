@@ -42,7 +42,7 @@ export const login = (email, password) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('https://akssocialmedia.netlify.app/login', { email, password }, config)
+        const { data } = await axios.post('/api/v1/login', { email, password }, config)
 
         dispatch ({
             type: LOGIN_SUCCESS,
@@ -73,7 +73,7 @@ export const register = (userData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('https://akssocialmedia.netlify.app/api/v1/register', userData, config)
+        const { data } = await axios.post('/api/v1/register', userData, config)
 
         dispatch({
             type: REGISTER_USER_SUCCESS,
@@ -94,7 +94,7 @@ export const loadUser = () => async (dispatch) => {
 
         dispatch({ type: LOAD_USER_REQUEST })
 
-        const { data } = await axios.get('https://akssocialmedia.netlify.app/api/v1/me')
+        const { data } = await axios.get('/api/v1/me')
 
         dispatch({
             type: LOAD_USER_SUCCESS,
@@ -115,7 +115,7 @@ export const loadmyfriends = () => async (dispatch) => {
 
         dispatch({ type: MYFRIEND_REQUEST })
 
-        const { data } = await axios.get('https://akssocialmedia.netlify.app/api/v1/myfriends')
+        const { data } = await axios.get('/api/v1/myfriends')
     
 
         dispatch({
@@ -135,7 +135,7 @@ export const loadmyfriends = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
 
-        await axios.get('https://akssocialmedia.netlify.app/api/v1/logout')
+        await axios.get('/api/v1/logout')
 
         dispatch({
             type: LOGOUT_SUCCESS,
@@ -160,7 +160,7 @@ export const updateProfile = (userData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.put('https://akssocialmedia.netlify.app/api/v1/me/update', userData, config)
+        const { data } = await axios.put('/api/v1/me/update', userData, config)
 
         dispatch({
             type: UPDATE_PROFILE_SUCCESS,
@@ -187,7 +187,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.put('https://akssocialmedia.netlify.app/api/v1/password/update', passwords, config)
+        const { data } = await axios.put('/api/v1/password/update', passwords, config)
 
         dispatch({
             type: UPDATE_PASSWORD_SUCCESS,
@@ -208,7 +208,7 @@ export const allUsers = () => async (dispatch) => {
 
         dispatch({ type: ALL_USERS_REQUEST })
 
-        const { data } = await axios.get('https://akssocialmedia.netlify.app/api/v1/users')
+        const { data } = await axios.get('/api/v1/users')
 
         dispatch({
             type: ALL_USERS_SUCCESS,
@@ -236,7 +236,7 @@ export const addFriend = (id,details) => async (dispatch) => {
         }
      
 
-        const { data } = await axios.put(`https://akssocialmedia.netlify.app/api/v1/addfriend/${id}`,details, config)
+        const { data } = await axios.put(`/api/v1/addfriend/${id}`,details, config)
 
         dispatch({
             type: UPDATE_FRIEND_SUCCESS,
