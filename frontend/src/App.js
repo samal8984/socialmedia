@@ -26,7 +26,7 @@ function App() {
   const { user, isAuthenticated, loading } = useSelector(state => state.auth)
   return (
     
-    <Router>
+    <Router basename='https://akssocialmedia.netlify.app' >
     <div className="App">
       <Navbar/>
 
