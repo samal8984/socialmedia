@@ -38,7 +38,7 @@ const { isAuthenticated,loginAuthenticated, error, loginerror, loading } = useSe
 useEffect(() => {
 
 	if (isAuthenticated) {
-		history.push('/')
+	
 	}
 
 	if (error) {
@@ -49,7 +49,7 @@ useEffect(() => {
 	}
 
 	if (loginAuthenticated) {
-		history.push('/')
+	
 	}
 
 	if  (loginerror) {
