@@ -73,7 +73,7 @@ export const register = (userData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('/https://akssocialmedia.netlify.app/v1/register', userData, config)
+        const { data } = await axios.post("https://akssocialmedia.netlify.app/register", userData, config)
 
         dispatch({
             type: REGISTER_USER_SUCCESS,
