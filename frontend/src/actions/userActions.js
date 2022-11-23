@@ -29,6 +29,7 @@ MYFRIEND_SUCCESS,
 MYFRIEND_FAIL,
 
 CLEAR_ERRORS} from '../constants/userConstants'
+const host = "https://akssocialmedia.netlify.app"
 
 
 export const login = (email, password) => async (dispatch) => {
@@ -73,7 +74,7 @@ export const register = (userData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post("https://akssocialmedia.netlify.app/api/v1/register", userData, config)
+        const { data } = await axios.post(`${host}/api/v1/register`, userData, config)
 
         dispatch({
             type: REGISTER_USER_SUCCESS,
