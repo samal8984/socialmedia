@@ -21,7 +21,8 @@ const myfriend =()=>{
     
     <Fragment>
 
-<nav className="navbar  navbar-expand-lg  navbar-light bg-dark " style={{ height:'100px' , 
+<nav className="navbar  navbar-expand-lg  navbar-light bg-dark " style={{ height:'100px' , position:'sticky',
+top:'0px'
     }} >
   <div className="container-fluid">
     <Link className="navbar-brand" to="/" style={{ color:'white', fontSize:'30px'}} >Social Media</Link>
