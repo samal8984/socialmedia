@@ -7,6 +7,7 @@ export const MyFriends = () => {
   
    
    const {friends} = useSelector(state => state.friend)
+  
    
    const {user}= useSelector( state => state.auth)
    const dispatch= useDispatch();
